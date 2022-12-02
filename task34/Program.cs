@@ -21,11 +21,14 @@ void PrintArray(int[] arr)
     for (int i = 0; i < arr.Length; i++)
     {
         if (i < arr.Length - 1)
+        {
             Console.Write($"{arr[i]}, ");
+        }
         else Console.Write($"{arr[i]}");
     }
     Console.WriteLine("]");
 }
+
 Console.Write("Выводим массив на печать: ");
 int[] array = NewArrayRandom(5, 100, 999);
 PrintArray(array);

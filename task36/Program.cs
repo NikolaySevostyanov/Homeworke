@@ -14,19 +14,22 @@ int[] NewArrayRandom(int size, int min, int max)
     }
     return arr;
 }
+
 void ArrayPrint(int[] arr)
 {
     Console.Write("[");
     for (int i = 0; i < arr.Length; i++)
     {
         if(i < arr.Length -1)
-        Console.Write($"{arr[i]}, ");
+        {
+            Console.Write($"{arr[i]}, ");
+        }
         else Console.Write($"{arr[i]}");
     }
     Console.Write("]");
 }
-Console.Write("Выводим массив на печать ----> ");
 
+Console.Write("Выводим массив на печать ----> ");
 int[] array = NewArrayRandom(10, 0, 9);
 ArrayPrint(array);
 
@@ -39,5 +42,6 @@ int OddElements(int[] arr)
     }
     return result;
 }
+
 int oddNumber = OddElements(array);
 Console.WriteLine($" Сумма нечетных элементов массива равна ----> {oddNumber}");

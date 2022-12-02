@@ -12,6 +12,7 @@ double[] NewRandowDouble(int size, int min, int max)
     }
     return arr;
 }
+
 void PrintArray(double[] arr)
 {
     Console.Write("[");
@@ -23,29 +24,33 @@ void PrintArray(double[] arr)
     }
     Console.WriteLine("]");
 }
+
 Console.Write("Выводим массив на печать: ");
 double[] array = NewRandowDouble(5, 100, 999);
 PrintArray(array);
+
 double MaxDifference(double[] arr)
 {
-double maxNumber =arr[0];
-for (int i = 0; i < arr.Length; i++)
-{
-    if (arr[i] > maxNumber) maxNumber = arr[i];
+    double maxNumber =arr[0];
+        for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] > maxNumber) maxNumber = arr[i];
+            }
+            return maxNumber;
 }
-return maxNumber;
-}
+
 double MinDifference(double[] arr)
 {
-double minNumber = arr[0];
-for (int i = 0; i < arr.Length; i++)
-{
-    if (arr[i] < minNumber) minNumber = arr[i];
+    double minNumber = arr[0];
+        for (int i = 0; i < arr.Length; i++)
+        {
+            if (arr[i] < minNumber) minNumber = arr[i];
+        }
+        return minNumber;
 }
-return minNumber;
-}
+
+
 double differenceMax = MaxDifference(array);
 double differenceMin = MinDifference(array);
 double result = differenceMax - differenceMin;
-Console.Write(@$"Разницу между максимальным и минимальным элементами массива --->
-{Math.Round(result, 2)}");
+Console.Write(@$"Разницу между максимальным и минимальным элементами массива ---> {Math.Round(result, 2)}");
