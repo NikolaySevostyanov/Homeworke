@@ -20,7 +20,7 @@ void ArrayPrint(int[] arr)
     Console.Write("[");
     for (int i = 0; i < arr.Length; i++)
     {
-        if(i < arr.Length -1)
+        if (i < arr.Length - 1)
         {
             Console.Write($"{arr[i]}, ");
         }
@@ -37,8 +37,9 @@ int OddElements(int[] arr)
 {
     int result = 0;
     for (int i = 0; i < arr.Length; i++)
-    {  if (i % 2 == 1)
-    result += arr[i];
+    {
+        if (i % 2 == 1)
+            result += arr[i];
     }
     return result;
 }
